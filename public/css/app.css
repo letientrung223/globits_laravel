@@ -1,0 +1,96 @@
+/* app.css */
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+.table-container {
+    background-color: lightblue; /* Màu nền xanh cho table-container */
+    width: 45%; /* Đặt chiều rộng của container */
+    padding: 20px; /* Thêm padding cho container */
+    vertical-align: top; /* Căn container lên trên */
+    }
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    display: inline-block;
+}
+.table-container th,
+.table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Set the width for each column */
+.table-container th:nth-child(1),
+.table-container td:nth-child(1) {
+    width: 5%;
+}
+
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+    width: 10%;
+}
+
+.table-container th:nth-child(3),
+.table-container td:nth-child(3) {
+    width: 15%;
+}
+
+.table-container th:nth-child(4),
+.table-container td:nth-child(4) {
+    width: 50%;
+}
+
+.menu_nav {
+        width: 100%;
+        background-color: yellow;
+        padding: 10px 0; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        margin-bottom:10px;
+        
+}
+.menu li{
+    display: inline-block;
+    font-size: 20px;
+    margin-right:10px;
+
+    }
+.form-container {
+    background-color: lightpink; /* Màu nền hồng cho form-container */
+    width: 45%; /* Đặt chiều rộng của container */
+    padding: 20px; /* Thêm padding cho container */
+    vertical-align: top; /* Căn container lên trên */
+    display: none;
+    justify-content: center;
+
+}
+.form-container_2 {
+    display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo form-container_2 chiếm toàn bộ chiều cao của form-container */
+}
+
+/* CSS cho form */
+.form-container_2 form {
+    width: 300px; /* Điều chỉnh chiều rộng của form */
+    padding: 20px; /* Thêm padding cho form */
+    
+}
+
+.form-container_2 label {
+    margin-bottom: 10px;
+}
+
+.form-container_2 input {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.form-container_2 form button {
+    width: 100px;
+    margin-top: 20px;
+
+}
