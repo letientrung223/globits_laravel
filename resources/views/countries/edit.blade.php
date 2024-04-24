@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Country</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('content')
+
     <h3>Edit Country</h3>
     <form method="POST" action="{{ route('countries.update', $country->id) }}">
         @csrf
@@ -18,5 +14,4 @@
         <textarea id="description" name="description">{{ $country->description }}</textarea><br>
         <button type="submit">Save Changes</button>
     </form>
-</body>
-</html>
+@endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\PersonController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\DepartmentController;
 
 
 /*
@@ -56,3 +57,10 @@ Route::post('/role', [RoleController::class, 'store'])->name('roles.store');
 Route::get('/role/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
 Route::put('/role/update/{id}', [RoleController::class, 'update'])->name('roles.update');
 Route::delete('/role/delete/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
+
+//DEPARTMENT
+Route::get('/department', [DepartmentController::class, 'index'])->name('departments');
+Route::post('/department', [DepartmentController::class, 'store'])->name('departments.store');
+Route::get('/department/edit/{id}', [DepartmentController::class, 'edit'])->name('departments.edit');
+Route::put('/department/update/{id}', [DepartmentController::class, 'update'])->name('departments.update');
+Route::delete('/department/delete/{id}', [DepartmentController::class, 'destroy'])->name('departments.destroy');

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-</head>
+@extends('layout.app')
+
+@section('content')
 <body>
     <h1>Hello Globits </h1>
 </body>
-</html>
+@endsection
+

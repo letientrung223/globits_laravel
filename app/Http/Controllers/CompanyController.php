@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Services\CompanyService;
+use App\Services\DepartmentService;
 use Illuminate\Http\Request;
 use App\Http\Requests\CompanyRequest;
 
@@ -9,9 +10,10 @@ class CompanyController extends Controller
 {
     protected $companyService;
 
-    public function __construct(CompanyService $companyService)
+    public function __construct(CompanyService $companyService,DepartmentService $dpmService)
     {
         $this->companyService = $companyService;
+        $this->dpmService =$dpmService;
     }
 
     // Hiển thị danh sách công ty
@@ -41,7 +43,9 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $company = $this->companyService->findById($id);
-        return view('companies.edit', compact('company'));
+        $departments = $this->dpmService->getByCompanyId($id);
+        // dd($departments);
+        return view('companies.edit', compact('company','departments'));
     }
 
     // Cập nhật thông tin công ty trong cơ sở dữ liệu

@@ -94,3 +94,72 @@
     margin-top: 20px;
 
 }
+
+/* Định dạng cho phần header (thead) của bảng */
+#departmentTable thead {
+    background-color: #3498db; /* Màu nền xanh */
+    color: #fff; /* Màu chữ trắng */
+}
+
+/* Định dạng cho các icon chỉnh sửa */
+#departmentTable .fa-edit {
+    color: #3598DB; /* Màu xanh lá cây */
+}
+
+/* Định dạng cho các icon xoá */
+#departmentTable .fa-trash {
+    color: #e74c3c; /* Màu đỏ */
+}
+
+/* Kẻ ô cho bảng */
+#departmentTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#departmentTable th, #departmentTable td {
+    border: 1px solid #ddd; /* Kẻ ô với màu xám nhạt */
+    padding: 8px;
+    text-align: left;
+}
+
+#departmentTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+/* CSS cho department cha */
+#departmentTable tbody tr.parent-department {
+    background-color: #EEE8AA; 
+}
+
+/* CSS cho department con */
+#departmentTable tbody tr.child-department {
+    background-color: #66CDAA; 
+}
+
+.add-new {
+    background-color: #00A9EE;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.add-excel {
+    background-color: #E33349;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
