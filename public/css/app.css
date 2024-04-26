@@ -8,6 +8,7 @@
     width: 45%; /* Đặt chiều rộng của container */
     padding: 20px; /* Thêm padding cho container */
     vertical-align: top; /* Căn container lên trên */
+
     }
 .table-container table {
     width: 100%;
@@ -162,4 +163,19 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.pagination-area {
+    text-align: center; /* Căn chỉnh phân trang vào giữa */
+}
+
+.pagination-area ul.pagination {
+    display: inline-block;
+    margin: auto;
+    padding: 0; /* Canh giữa phân trang */
+}
+
+.pagination-area ul.pagination li {
+    display: inline;
+     /* Điều chỉnh khoảng cách giữa các phần tử */
 }

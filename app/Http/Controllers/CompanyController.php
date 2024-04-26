@@ -19,7 +19,8 @@ class CompanyController extends Controller
     // Hiển thị danh sách công ty
     public function index()
     {
-        $companies = $this->companyService->getAll();
+        $companies = $this->companyService->getAllPaginated(2);
+        
         // dd($countries);
         return view('companies.companies', compact('companies'));
     }

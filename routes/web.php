@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\ProjectController;
 
 
 /*
@@ -36,6 +37,9 @@ Route::post('/person', [PersonController::class, 'store'])->name('persons.store'
 Route::get('/person/edit/{id}', [PersonController::class, 'edit'])->name('persons.edit');
 Route::put('/person/update/{id}', [PersonController::class, 'update'])->name('persons.update');
 Route::delete('/person/delete/{id}', [PersonController::class, 'destroy'])->name('persons.destroy');
+Route::post('person/get-persons-by-company-id/{id}', [PersonController::class, 'getPersonByCompanyId'])->name('persons.getPersonByCompanyId');
+
+
 
 //USER
 Route::get('/user', [UserController::class, 'index'])->name('users');
@@ -64,3 +68,13 @@ Route::post('/department', [DepartmentController::class, 'store'])->name('depart
 Route::get('/department/edit/{id}', [DepartmentController::class, 'edit'])->name('departments.edit');
 Route::put('/department/update/{id}', [DepartmentController::class, 'update'])->name('departments.update');
 Route::delete('/department/delete/{id}', [DepartmentController::class, 'destroy'])->name('departments.destroy');
+
+//PROJECT
+Route::get('/project', [ProjectController::class, 'index'])->name('projects');
+Route::post('/project', [ProjectController::class, 'store'])->name('projects.store');
+Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::put('/project/update/{id}', [ProjectController::class, 'update'])->name('projects.update');
+Route::delete('/project/delete/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

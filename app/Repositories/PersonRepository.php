@@ -53,4 +53,12 @@ class PersonRepository
         }
         return false;
     }
+     public function getPersonByCompanyId($companyId)
+    {
+        return $this->model->where('company_id', $companyId)->get();
+    }
+    public function getAllPaginated($perPage = 5)
+    {
+        return $this->model->paginate($perPage);
+    }
 }

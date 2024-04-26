@@ -31,6 +31,12 @@
         </table>
         <br/>
         <input type="button" id="showFormButton" value="Add New Company"/>
+        <div class="pagination-area">
+            <ul class="pagination">
+                {{ $companies->onEachSide(1)->links('pagination::bootstrap-4') }}
+
+            </ul>
+        </div>
     </div>
     <div class="form-container">
         <div class="form-container_2">

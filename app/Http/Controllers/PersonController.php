@@ -27,7 +27,9 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $persons = $this->personService->getAll();
+        // $persons = $this->personService->getAll();
+        $persons = $this->personService->getAllPaginated(2);
+        
         $companies=$this->companyService->getAll();
         return view('persons.persons', compact('persons','companies'));
     }
@@ -37,6 +39,13 @@ class PersonController extends Controller
         $person = $this->personService->findById($id);
 
         return view('persons.person', compact('person'));
+    }
+
+     public function getPersonByCompanyId($company_id)
+    {
+        $persons = $this->personService->getPersonByCompanyId($company_id);
+        // Xử lý kết quả nếu cần
+        return response()->json($persons);
     }
 
     /**

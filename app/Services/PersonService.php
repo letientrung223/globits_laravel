@@ -43,4 +43,12 @@ class PersonService
     {
         return $this->personRepository->delete($id);
     }
+    public function getPersonByCompanyId($company_id)
+    {
+        return $this->personRepository->getPersonByCompanyId($company_id);
+    }
+    public function getAllPaginated($perPage = 5)
+    {
+        return $this->personRepository->getAllPaginated($perPage);
+    }
 }

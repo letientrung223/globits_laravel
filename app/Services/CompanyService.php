@@ -43,4 +43,8 @@ class CompanyService
     {
         return $this->companyRepository->delete($id);
     }
+    public function getAllPaginated($perPage = 5)
+    {
+        return $this->companyRepository->getAllPaginated($perPage);
+    }
 }

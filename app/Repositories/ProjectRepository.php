@@ -2,15 +2,15 @@
 
 namespace App\Repositories;
 
-use App\Models\Company;
+use App\Models\Project;
 
-class CompanyRepository
+class ProjectRepository
 {
     protected $model;
 
-    public function __construct(Company $company)
+    public function __construct(Project $project)
     {
-        $this->model = $company;
+        $this->model = $project;
     }
 
     // Lấy tất cả bản ghi
@@ -28,17 +28,16 @@ class CompanyRepository
     // Tạo bản ghi mới
     public function create(array $data)
     {
-        // dd("Đã tới đây");
         return $this->model->create($data);
     }
 
     // Cập nhật bản ghi
     public function update($id, array $data)
     {
-        $company = $this->model->find($id);
-        if ($company) {
-            $company->update($data);
-            return $company;
+        $project = $this->model->find($id);
+        if ($project) {
+            $project->update($data);
+            return $project;
         }
         return null;
     }
@@ -46,9 +45,9 @@ class CompanyRepository
     // Xóa bản ghi
     public function delete($id)
     {
-        $company = $this->model->find($id);
-        if ($company) {
-            $company->delete();
+        $project = $this->model->find($id);
+        if ($project) {
+            $project->delete();
             return true;
         }
         return false;
