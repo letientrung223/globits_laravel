@@ -129,4 +129,10 @@ class ProjectController extends Controller
         $this->projectService->delete($id);
         return redirect()->route('projects')->with('success', 'Project deleted successfully.');
     }
+     public function getProjectByCompanyId($company_id)
+    {
+        $projects = $this->projectService->getProjectByCompanyId($company_id);
+        // Xử lý kết quả nếu cần
+        return response()->json($projects);
+    }
 }

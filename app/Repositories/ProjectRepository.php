@@ -56,4 +56,8 @@ class ProjectRepository
     {
         return $this->model->paginate($perPage);
     }
+    public function getProjectByCompanyId($companyId)
+    {
+        return $this->model->where('company_id', $companyId)->get();
+    }
 }

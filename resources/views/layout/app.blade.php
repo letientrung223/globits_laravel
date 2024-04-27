@@ -27,6 +27,7 @@
                 <li><a href="{{ route('companies') }}">Company</a></li>
                 <li><a href="{{ route('roles') }}">Roles</a></li>
                 <li><a href="{{ route('projects') }}">Project</a></li>
+                <li><a href="{{ route('tasks') }}">Task</a></li>
             </ul>
         </nav>
     </header>

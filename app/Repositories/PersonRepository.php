@@ -53,7 +53,7 @@ class PersonRepository
         }
         return false;
     }
-     public function getPersonByCompanyId($companyId)
+    public function getPersonByCompanyId($companyId)
     {
         return $this->model->where('company_id', $companyId)->get();
     }

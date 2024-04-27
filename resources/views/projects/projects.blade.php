@@ -87,9 +87,9 @@
             <label for="company">Choose a company:</label>
             <select name="company_id" id="company_id">
                 <option value="">Select Company</option>
-              @foreach ($companies as $company)
-                    <option value="{{$company->id}}">{{$company->name}}</option>
-              @endforeach
+            @foreach ($companies as $company)
+                <option value="{{$company->id}}">{{$company->name}}</option>
+            @endforeach
             </select>
 
             <label for="person">Choose person</label><br/>

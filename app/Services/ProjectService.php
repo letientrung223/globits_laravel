@@ -47,4 +47,8 @@ class ProjectService
     {
         return $this->projectRepository->getAllPaginated($perPage);
     }
+    public function getProjectByCompanyId($company_id)
+    {
+        return $this->projectRepository->getProjectByCompanyId($company_id);
+    }
 }

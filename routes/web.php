@@ -8,6 +8,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TaskController;
 
 
 /*
@@ -75,6 +76,27 @@ Route::post('/project', [ProjectController::class, 'store'])->name('projects.sto
 Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('projects.edit');
 Route::put('/project/update/{id}', [ProjectController::class, 'update'])->name('projects.update');
 Route::delete('/project/delete/{id}', [ProjectController::class, 'destroy'])->name('projects.destroy');
+Route::post('project/get-projects-by-company-id/{id}', [ProjectController::class, 'getProjectByCompanyId'])->name('projects.getProjectByCompanyId');
+
+//TASK
+Route::get('/task', [TaskController::class, 'index'])->name('tasks');
+Route::post('/task', [TaskController::class, 'store'])->name('tasks.store');
+Route::get('/task/edit/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
+Route::put('/task/update/{id}', [TaskController::class, 'update'])->name('tasks.update');
+Route::delete('/task/delete/{id}', [TaskController::class, 'destroy'])->name('tasks.destroy');
+Route::delete('/task/delete-task/{id}', [TaskController::class, 'delete'])->name('tasks.delete');
+
+
+Route::get('/task/search/', [TaskController::class, 'search'])->name('tasks.search');
+
+Route::get('/task/filter/company_id', [TaskController::class, 'filterByCompanyId']);
+Route::get('/task/filter/person_id', [TaskController::class, 'filterByPersonId']);
+Route::get('/task/filter/priority', [TaskController::class, 'filterByPriority']);
+Route::get('/task/filter/status', [TaskController::class, 'filterByStatus']);
+Route::get('/task/filter/project_id', [TaskController::class, 'filterByProjectId']);
+
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
